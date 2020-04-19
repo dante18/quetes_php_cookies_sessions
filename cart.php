@@ -1,5 +1,6 @@
 <?php
 require 'inc/head.php';
+require 'checkConnection.php';
 
 if(isset($_SESSION['card']['product'])) {
     $productList = $_SESSION['card']['product'];
