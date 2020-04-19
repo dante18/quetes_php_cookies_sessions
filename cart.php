@@ -20,14 +20,16 @@ if(isset($_SESSION['card']['product'])) {
               <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Quantity</th>
                     </tr>
               </thead>
 
               <tbody>
                     <?php if (!empty($productList)): ?>
-                        <?php foreach ($productList as $product): ?>
+                        <?php foreach ($productList as $product => $quantity): ?>
                             <tr>
                                 <td><?= $product ?></td>
+                                <td><?= $quantity ?></td>
                             </tr>
                         <?php endforeach; ?>
                     <?php else: ?>

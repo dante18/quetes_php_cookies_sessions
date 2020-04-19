@@ -9,21 +9,41 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         switch ($_GET["add_to_cart"]) {
             case "46":
-                array_push($_SESSION['card']['product'], "pecanNuts");
+                if(empty($_SESSION['card']['product']['pecanNuts'])) {
+                    $_SESSION['card']['product']['pecanNuts'] = 1;
+                } else {
+                    $_SESSION['card']['product']['pecanNuts'] ++;
+                }
+
                 header('Location: index.php');
                 break;
             case "36":
-                array_push($_SESSION['card']['product'], "chocolateChips");
+                if(empty($_SESSION['card']['product']['chocolateChips'])) {
+                    $_SESSION['card']['product']['chocolateChips'] = 1;
+                } else {
+                    $_SESSION['card']['product']['chocolateChips'] ++;
+                }
+
                 header('Location: index.php');
                 break;
 
             case "58":
-                array_push($_SESSION['card']['product'], "chocolateCookie");
+                if(empty($_SESSION['card']['product']['chocolateCookie'])) {
+                    $_SESSION['card']['product']['chocolateCookie'] = 1;
+                } else {
+                    $_SESSION['card']['product']['chocolateCookie'] ++;
+                }
+
                 header('Location: index.php');
                 break;
 
             case "32":
-                array_push($_SESSION['card']['product'], "mmsCookies");
+                if(empty($_SESSION['card']['product']['mmsCookies'])) {
+                    $_SESSION['card']['product']['mmsCookies'] = 1;
+                } else {
+                    $_SESSION['card']['product']['mmsCookies'] ++;
+                }
+
                 header('Location: index.php');
                 break;
         }
