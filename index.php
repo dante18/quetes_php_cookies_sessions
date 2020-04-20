@@ -1,6 +1,5 @@
 <?php
 require 'inc/head.php';
-require 'checkConnection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['add_to_cart'])) {
